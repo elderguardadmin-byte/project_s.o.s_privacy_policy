@@ -2,7 +2,7 @@
 
 Project S.O.S, by Upton Software Ltd. Liability Company
 
-Effective date: 2 November 2026
+Effective date: 3 November 2026
 
 These terms are the agreement between you and Upton Software Ltd. Liability Company for the Project S.O.S app. Please read them. They are short. A copy is published at https://elderguardadmin-byte.github.io/project_s.o.s_privacy_policy/.
 
@@ -18,6 +18,8 @@ Nearby delivery depends on other phones with the app being close by, and on thos
 
 Crash and fall detection is not a certified safety or medical device. It can miss a real crash or fall, and it can go off when nothing is wrong. On iPhone and iPad it only watches while the app is open on screen. Do not rely on it as your only way to get help.
 
+The same limits apply to answers, trips, requests, "Tell them I'm safe", the volume button trigger and answering calls during an alert. A request to another phone reaches it only when that phone's app is open or an alert is running there, and may never arrive. The volume button trigger can stop working if the phone or the system ends the app.
+
 Send a test alert to the people you trust before you rely on the app, and test again after you change your phone or settings.
 
 ## 3. Your licence
@@ -30,11 +32,23 @@ The app and its content belong to Upton Software Ltd. Liability Company or its l
 
 You decide what goes in an alert, what you record and who receives it. The app only passes on what you choose. Upton Software Ltd. Liability Company does not see, check or control what you send, and is not responsible for it.
 
-You must not use the app to harass, threaten or mislead anyone, to send false alerts, or to break the law. Only add people who have agreed to get your alerts.
+You must not use the app to harass, threaten or mislead anyone, to send false alerts, or to break the law. Only add people who have agreed to get your alerts. You must not set up the app on someone else's phone, or use location requests, recording requests or answered calls, to track, record or listen to a person who has not agreed.
 
 ## 5. Recording
 
 Laws on recording people, video and sound differ between countries and states. Some places require everyone being recorded to agree. You are responsible for knowing and following the law where you are, before you turn recording or streaming on.
+
+This also applies to:
+
+- "Record sound only", which records without sending an alert and without telling anyone;
+- dashcam mode, which records on a loop while it is on, including people in or near your car;
+- "Answer calls during an alert", which lets the person who calls hear everything near your phone, through an open call.
+
+Some places treat these differently from an ordinary recording or call. Check before you turn them on.
+
+## 5a. Deleting and wiping
+
+Delete my profile and panic wipe delete what the app keeps on your phone. This cannot be undone, and Upton Software Ltd. Liability Company cannot recover it, because it never had a copy. Keep your own backup if you may need your data later.
 
 ## 6. Services you connect
 

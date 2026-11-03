@@ -46,9 +46,13 @@ No. The app is not an emergency service. If you are in danger, call your local e
 
 Yes, if you turn it on. It can use the phone's camera and microphone, GoPro cameras over Bluetooth (early support), Bluetooth trigger buttons, and devices on your network that start from a web address. You can also stream live or upload to a service you set up. On iPhone, phone video stops when the app goes into the background, and recording carries on with sound only.
 
+### Can I record without sending an alert?
+
+Yes. "Record sound only" on the SOS screen records sound and tells nobody. Dashcam mode (Settings, Recording, Dashcam mode) records on a loop and keeps only the last few minutes. If you press SOS while it is on, those minutes are kept with the alert. Both stay encrypted on your phone. On Android a notification shows while they record. On iPhone, video stops while the app is in the background, and sound carries on.
+
 ### Is it legal to record?
 
-That depends on where you are. Some places require everyone being recorded to agree. You are responsible for following the law where you are. If you are not sure, check before you turn recording on.
+That depends on where you are. Some places require everyone being recorded to agree. You are responsible for following the law where you are. If you are not sure, check before you turn recording on. This includes sound recordings without an alert, dashcam mode and "Answer calls during an alert", which lets the caller hear what is near your phone.
 
 ### Can I change how the app looks?
 
@@ -57,6 +61,19 @@ Yes. Go to Settings, then Appearance, and pick one of 28 themes, or build your o
 ### What data do you collect?
 
 The app sends Upton Software Ltd. Liability Company nothing. The company has no servers, no analytics and no ads. If you email the company, it keeps your email to answer you. Read the full privacy policy: https://elderguardadmin-byte.github.io/project_s.o.s_privacy_policy/.
+
+### How do I delete my profile and data?
+
+There is no account on any server, so everything is on your phone. To delete it:
+
+1. Open Project S.O.S.
+2. If an alert or a check-in timer is running, end it first.
+3. Go to Settings, then Data, then Delete my profile.
+4. Read the notes, then hold the button until it fills. You can also tap to delete instead, then confirm.
+
+The app deletes your username, your app code, your people, history, recordings, notes, trips and settings from this phone, and starts again as if newly installed. This cannot be undone. Messages you already sent stay on your people's phones. Backups you saved yourself are not touched. Uninstalling the app also removes everything on the phone.
+
+More detail: https://elderguardadmin-byte.github.io/project_s.o.s_privacy_policy/delete-your-data
 
 ### How do I get a refund?
 
