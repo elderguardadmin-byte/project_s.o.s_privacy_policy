@@ -11,16 +11,16 @@ Project S.O.S has no accounts on any server. Your profile (your display name and
 ## Delete your profile in the app
 
 1. Open Project S.O.S.
-2. If an alert is on, end it first.
-3. Go to **Settings**, then **Delete my profile**.
-4. Read what will be deleted, then confirm.
+2. If an alert or a check-in timer is running, end it first.
+3. Go to **Settings**, then **Data**, then **Delete my profile**.
+4. Read what will be deleted, then hold the button until it fills. You can also tap to delete instead, and confirm.
 
 The app then deletes, from this phone:
 
 - your display name and your app code (the keys in the iPhone Keychain or Android Keystore)
 - your people, groups and emergency types
 - your alert history, recordings and their keys, notes and trips
-- your check-in timer, reminders and settings
+- your check-in timer, scheduled reminders and alarms, settings, and saved and cached files
 
 The app then starts again as if it were newly installed. This cannot be undone.
 

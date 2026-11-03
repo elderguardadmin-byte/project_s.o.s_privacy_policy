@@ -2,7 +2,7 @@
 
 Project S.O.S, by Upton Software Ltd. Liability Company
 
-Effective date: 2 November 2026
+Effective date: 3 November 2026
 
 This policy covers the Project S.O.S app on iPhone, iPad and Android. It says the same as the "Privacy and terms" screen inside the app, with more detail. A copy is published at https://elderguardadmin-byte.github.io/project_s.o.s_privacy_policy/.
 
@@ -10,7 +10,7 @@ This policy covers the Project S.O.S app on iPhone, iPad and Android. It says th
 
 The app sends nothing to Upton Software Ltd. Liability Company. The company has no servers, no accounts, no analytics and no ads. The company never sees your alerts, your people, your recordings or your location.
 
-What you put in the app stays on your device, encrypted. It leaves your device only when you send it, and it goes only to the people and services you choose.
+What you put in the app stays on your device, encrypted. It leaves your device only when you send it, or when a person you allowed asks for your location. It goes only to the people and services you choose.
 
 ## Who makes the app
 
@@ -31,11 +31,18 @@ The company is based in the United States, so support emails are kept and answer
 
 ## What stays on your device
 
-Everything you put in the app stays on your device. That includes your name, your phone number, your people and groups, your emergency types, your health details if you add them, your settings, your recordings and your alert history.
+Everything you put in the app stays on your device. That includes your name, your phone number, your people and groups, your emergency types, your health details if you add them, your settings, your recordings and your alert history. It also includes:
 
-The alert history is a log of the alerts you sent and received: the emergency type, the times, who it went to or came from, whether it was delivered and seen, the location trail, any recordings and your own notes. It is kept for 1 year unless you change that in Settings, Alert history (forever, 1 year, 90 days or 30 days). Alerts that still have recordings are kept until you delete them.
+- notes you write about an encounter (a name, badge or ID number, agency, vehicle plate, your own text and, if location is allowed, where the phone was), each signed with your own key when you save it;
+- answers your people send to your alerts ("On my way", "I'm calling you", "I can't come") and the answers you send to theirs;
+- trips your people share with you, kept until 24 hours after the time they expected to arrive;
+- what each person may ask your phone for (both off by default), the requests you sent and the notices about requests you received;
+- sound recordings you start without an alert, and what dashcam mode keeps;
+- the person whose calls are answered during an alert (Android), the car you chose for dashcam mode, your volume button pattern and your home screen icon choice.
 
-Quick triggers are the one exception to "encrypted by the app". So that the widget, the quick settings tile, the app icon shortcut, Siri or Google Assistant and your watch can show the right words without opening the app's database, the app keeps a small list in the device's own app storage: which quick triggers are on and which emergency type each sends, and the names of your emergency types only while Siri or Google Assistant is on or you chose "Show the emergency name". It holds no people, phone numbers, messages or locations. It is protected by your device's own encryption, not by the app's key, and it is not included in device or cloud backups. By default the widget, the lock screen, the tile and the app icon shortcut just say "Quick alert", so someone holding your phone cannot see what your emergency types are. You can turn each quick trigger off, or choose to show the names, in Settings, Quick triggers.
+The alert history is a log of the alerts you sent and received: the emergency type, the times, who it went to or came from, whether it was delivered and seen, the answers, the location trail, any recordings and your own notes. Sound recordings made without an alert are listed there too, marked "No alert was sent". It is kept for 1 year unless you change that in Settings, Data, Alert history (forever, 1 year, 90 days or 30 days). Alerts that still have recordings are kept until you delete them.
+
+Quick triggers are the one exception to "encrypted by the app". So that the widget, the quick settings tile, the app icon shortcut, Siri or Google Assistant and your watch can show the right words without opening the app's database, the app keeps a small list in the device's own app storage: which quick triggers are on and which emergency type each sends, and the names of your emergency types only while Siri or Google Assistant is on or you chose "Show the emergency name". It holds no people, phone numbers, messages or locations. It is protected by your device's own encryption, not by the app's key, and it is not included in device or cloud backups. On Android, "Start dashcam in my car" keeps the Bluetooth name of the car you chose in the same kind of app storage, so the phone can offer dashcam mode when the car connects while the app is closed. By default the widget, the lock screen, the tile and the app icon shortcut just say "Quick alert", so someone holding your phone cannot see what your emergency types are. You can turn each quick trigger off, or choose to show the names, in Settings, Triggers, Quick triggers.
 
 It is all stored encrypted. The database is locked with a random key held in your device's secure keystore (the Keychain on iPhone and iPad, the Keystore on Android). Each recording is encrypted with its own key. A recording is written in short pieces; each piece is encrypted as soon as it is finished and the unencrypted copy is deleted. If the app is stopped while recording, the unfinished piece is encrypted and filed with its own alert the next time the app opens.
 
@@ -43,13 +50,38 @@ The app's data is not included in your phone's own backups. On Android the app t
 
 If you set safety PINs (an all clear PIN and a duress PIN), the app keeps only a salted Argon2id hash of each one in the same secure keystore, never the PIN itself. When you use the duress PIN, the app looks as if your alert ended, but keeps sending encrypted app messages with your location to your people, telling them you may be under duress. It sends a text message too only if you turned that on. This record of the alert is hidden from this phone's alert history until you enter your all clear PIN.
 
-As each part of a recording is saved, the app takes its SHA-256 fingerprint and signs it with your own key, in a list kept encrypted next to the recording. This lets you show later that a file has not been changed since your phone signed it. It does not prove what happened, and nothing about it is sent to Upton Software Ltd. Liability Company or anyone else.
+As each part of a recording is saved, the app takes its SHA-256 fingerprint and signs it with your own key, in a list kept encrypted next to the recording. This lets you show later that a file has not been changed since your phone signed it. Notes you write are signed the same way. It does not prove what happened, and nothing about it is sent to Upton Software Ltd. Liability Company or anyone else.
+
+### Recording without an alert
+
+"Record sound only" on the SOS screen records sound with the microphone without sending an alert. Nobody is told. Dashcam mode records in short pieces (with the camera, or sound only) and keeps only the last few minutes you chose; older pieces are deleted as new ones are made, and turning it off deletes what it kept. Both are encrypted on your device in the same way as alert recordings and are never uploaded by themselves. If you press SOS while dashcam mode is on, the minutes before the press are kept with that alert's recordings. If the app closes while dashcam mode is recording, what it kept is filed in your alert history the next time the app opens, for you to keep or delete. On Android a notification shows while either one records. On iPhone and iPad the system shows its own microphone or camera indicator.
+
+### Panic lock and panic wipe
+
+Panic lock makes the app look new and empty until you enter your unlock PIN. Nothing is deleted. Panic wipe deletes the keys that unlock the app's data from the Keychain or Keystore, then deletes the app's files, when you type your wipe PIN. After that, nothing the app kept on that phone can be read. Phone storage may keep pieces of deleted files for a while, but without the keys they cannot be read. The app keeps only a salted Argon2id hash of these PINs, like your other safety PINs.
+
+### Answering calls during an alert (Android)
+
+If you turn on "Answer calls during an alert" (off by default, Android 10 and newer), a call from the one person you chose is answered by itself while an alert is on, and the speaker is turned on. That person can then hear what is happening near your phone. For this the app needs to answer phone calls, to be your phone's caller ID and spam app, and Contacts. It uses these only to see the number of an incoming call. The number is compared on your device. It is never saved or sent. The app never reads, copies or stores your contacts list, and it never blocks, silences or hides a call. It does nothing when no alert is on, or while an alert you ended with your duress PIN is still running. The answered call shows in your call history as normal.
+
+### Fake call and blank screen
+
+The fake call and blank screen are shown by the app on your phone. They send nothing and record nothing.
 
 ## What leaves your device, and who gets it
 
-Data leaves your device only when you send an alert, stream, upload or share something. It goes only to the people and services you chose. Upton Software Ltd. Liability Company is not one of them.
+Data leaves your device only when you send an alert, a note, a trip, an answer or a request, stream, upload or share something, or when a person you allowed asks for your location. It goes only to the people and services you chose. Upton Software Ltd. Liability Company is not one of them.
 
 An alert holds what you set up for that emergency type. That can include your name, the emergency type, your location, your phone's battery level, a check-in timer note and the time it was due, a note that you may be under duress, a link to your live stream and any details you filled in, such as medical notes.
+
+Other things can go to your people, in the same two ways, when you choose them:
+
+- **Notes during an alert.** If "Also send to my people" is on when you save a note (it is on by default during an alert), the note goes as an update to the alert, by text and by app message.
+- **Live location.** During an alert, "Share live location" sends your location to the alert's people every so often. Each emergency type sets whether it starts on; you can turn it on or off during the alert.
+- **"Tell them I'm safe".** If an alert was left on, this sends an end message by text and app message, with your name, your phone number if you added one, the alert's title and the last location the alert had.
+- **Trips.** With a check-in timer you can "Tell them now": where you are going, when you expect to arrive, your note and, if that emergency type sends location, where you are. It goes by app message, and by text to people who do not have the app (with a maps link if location is included). They get another message when you extend, check in or cancel.
+- **Answers.** When someone sends you an alert, you can answer "On my way", "I'm calling you" or "I can't come". The answer goes to them by app message. "On my way" also goes by text if they have a phone number.
+- **Requests.** You can let a person ask your phone where you are, or ask it to record. Both are off by default and set for each person. Requests come only by app message, never by text. If you allowed it, your phone answers a location request by sending your location to that person by app message. A request to record starts your alert's recording only while an alert is running; otherwise the app asks you, and nothing records without you. Each time, your phone shows you a notice and a notification, except while an alert you ended with your duress PIN is still running.
 
 ### Text messages
 
@@ -81,7 +113,7 @@ Each link opens in your own web browser, never inside the app, and that website'
 
 ### Encrypted app messages
 
-Alerts to people who also use the app are sent as encrypted app messages as well. While an alert is running, the app also sends location updates to the same people this way. Messages are encrypted on your device so that only the person you sent them to can open them. They travel through public relays on the Nostr network.
+Alerts to people who also use the app are sent as encrypted app messages as well. While an alert is running, the app also sends location updates to the same people this way. Answers, trips, requests and their replies, and "Tell them I'm safe" use the same encrypted app messages. Messages are encrypted on your device so that only the person you sent them to can open them. They travel through public relays on the Nostr network.
 
 Relays are run by third parties, not by Upton Software Ltd. Liability Company. The company has no contract with them. You can see and change the list of relays in the app's settings.
 
@@ -125,24 +157,28 @@ Cameras, Bluetooth devices and network devices you connect get only the commands
 
 If you export a recording, the app makes plain, unencrypted copies of it, with a manifest.json and a verification.txt, and opens your device's share sheet. The manifest lists when and where each part was recorded, the recording device, and your public key, its fingerprint and your app code. If you export your alert history, the app makes a report (HTML), a CSV and a JSON file with everything in the history. These files are not encrypted. They go only where you send them. The app makes them in its own private folder and deletes them, and the copies the share sheet makes, once the share sheet closes; anything left over (for example if the app was closed while sharing) is deleted the next time the app opens and when an alert ends. Share them only with people you trust.
 
+"Make a file for a lawyer" puts one alert's recordings, signed notes, location trail, delivery log and signatures into a single file locked with a passphrase you choose (Argon2id and AES-256-GCM). The app never uploads it. It opens your share sheet and you choose where it goes. Anyone with the file and the passphrase can see everything in it, so give the passphrase separately.
+
 ### Backups
 
 If you save a backup, the app makes a file locked with a passphrase you choose. It can include your alert history if you leave that on. It never includes recordings. You decide where the file goes. If you keep it in a cloud service, that service's policy applies. Upton Software Ltd. Liability Company cannot open your backup and cannot recover a lost passphrase.
 
 ## Your responsibility for other people's data
 
-The people you add, and anyone you record, have their own privacy rights. Add only people who agree to get your alerts. If you record or stream other people, check the law where you are first. Keeping this data on your own phone for personal use is usually outside data protection law, but sharing recordings publicly may not be.
+The people you add, and anyone you record, have their own privacy rights. Add only people who agree to get your alerts. If you record or stream other people, check the law where you are first. This also applies to sound recordings without an alert, to dashcam mode, and to letting someone listen through an answered call. Keeping this data on your own phone for personal use is usually outside data protection law, but sharing recordings publicly may not be.
 
 ## Permissions and why the app asks
 
 The app asks for each permission only when you use the feature that needs it. You can say no and still use the rest of the app.
 
-- Location: to add where you are to an alert. It is read while an alert is running, while a check-in timer is running (so the alert can carry your last known location if you do not check in), once when a low battery alert is sent, and, as its last known location, when the traffic stop rights card is shown (to pick the area on your device, not saved or sent). On Android, if you leave the app during an alert, location updates carry on until you end the alert, and a notification shows while they do. It is not read at any other time.
-- Notifications: to remind you before a check-in timer runs out (5 minutes and 1 minute before, and when it is due). On Android they are also used for the recording and crash or fall detection notices. Reminders are made on your device. They do not go through Upton Software Ltd. Liability Company or any server.
+- Location: to add where you are to an alert. It is read while an alert is running, while a check-in timer is running (so the alert can carry your last known location if you do not check in, and a trip can say where you are), once when a low battery alert is sent, and, as its last known location, when the traffic stop rights card is shown (to pick the area on your device, not saved or sent), when you save a note, and when you start a sound recording without an alert (kept with the note or recording on your device). It is also read when a person you allowed asks where you are, and then sent only to that person. On Android, if you leave the app during an alert, location updates carry on until you end the alert, and a notification shows while they do. It is not read at any other time.
+- Notifications: to remind you before a check-in timer runs out (5 minutes and 1 minute before, and when it is due), and to tell you when a person asked your phone for your location or a recording. On Android they are also used for the recording, sound recording, dashcam, volume button and crash or fall detection notices, and to offer dashcam mode when your car connects. Reminders are made on your device. They do not go through Upton Software Ltd. Liability Company or any server.
 - Alarms and reminders (Android): so a check-in timer goes off on time, even if the app is closed or the phone restarted. Without it, Android may run the timer late.
-- Camera: to scan a person's QR code, and to record or stream video during an alert if you turn that on.
-- Microphone: to record sound during an alert if you turn that on. If you leave the app during an alert, sound keeps recording until you end the alert or tap Stop recording. On Android, phone video keeps recording too. On iPhone and iPad, phone video switches to sound only while the app is out of view, because iOS does not allow it.
-- Bluetooth (on Android, "Nearby devices"): to start a camera or trigger button when you send an alert, and, if you turn on nearby delivery, to pass your encrypted alert to phones close by.
+- Camera: to scan a person's QR code, to record or stream video during an alert if you turn that on, and for dashcam mode with video.
+- Microphone: to record sound during an alert if you turn that on, when you start "Record sound only", and for dashcam mode. If you leave the app while it records, sound keeps recording until you stop it (or end the alert). On Android, phone video keeps recording too. On iPhone and iPad, phone video switches to sound only while the app is out of view, because iOS does not allow it.
+- Bluetooth (on Android, "Nearby devices"): to start a camera or trigger button when you send an alert, if you turn on nearby delivery, to pass your encrypted alert to phones close by, and, for "Start dashcam in my car", to list the phone's paired devices and notice when your car connects. It does not scan for that.
+- Phone, Contacts and caller ID and spam app (Android only): for "Answer calls during an alert", if you turn it on. See "Answering calls during an alert" above.
+- Volume buttons: no permission. On Android, while you have armed the volume button trigger, a notification shows that it is ready. On iPhone and iPad it works only while the app is open on screen.
 - Motion sensors: for crash and fall detection, if you turn it on. On Android, while detection is on and the app is closed, a notification shows that it is watching.
 - Local network: to reach cameras, triggers and servers you set up on your own network.
 - Photos (save only): to save recordings to your photo library when you ask.
@@ -169,7 +205,11 @@ Project S.O.S is a general app. It is not meant for children under 13, and it is
 
 ## Deleting your data
 
-To delete your whole profile, go to Settings, Delete my profile. It deletes your display name, your app code and its keys, your people, groups, emergency types, history, recordings, notes and settings from your device, and the app starts again as if newly installed. The steps are also at https://elderguardadmin-byte.github.io/project_s.o.s_privacy_policy/delete-your-data. You can also delete people, groups and emergency types in the app at any time. In Settings, Alert history you can delete one alert, or all of them, with their recordings. Uninstalling the app removes everything it stored on your device. Backups you saved elsewhere are yours to delete. Messages already delivered stay on the recipient's phone, and a relay may keep its copy of an encrypted message for a while. Streams and uploads stay with the service you sent them to, under your account there.
+You can delete people, groups and emergency types in the app at any time. In Settings, Data, Alert history you can delete one alert, or all of them, with their recordings. Notes written without an alert can be deleted in History.
+
+To delete everything at once, go to Settings, then Data, then Delete my profile. If an alert or a check-in timer is running, end it first. Read what will be deleted, then hold the button until it fills (or tap to delete instead, and confirm). The app deletes, from your device, your username and your identity keys in the Keychain or Keystore, your people, groups and emergency types, recordings and their keys, history and notes, trips, check-in timers, settings, saved and cached files, and scheduled reminders and alarms. It then starts again as if newly installed. This cannot be undone. People who added you keep your old app code until they remove you. The steps are also at https://elderguardadmin-byte.github.io/project_s.o.s_privacy_policy/delete-your-data.
+
+Upton Software Ltd. Liability Company holds none of this data, so there is nothing for the company to delete on its side. Panic wipe (above) also makes everything on the device unreadable. Uninstalling the app removes everything it stored on your device. Backups you saved elsewhere are yours to delete. Messages already delivered stay on the recipient's phone, and a relay may keep its copy of an encrypted message for a while. Streams and uploads stay with the service you sent them to, under your account there.
 
 To have your support emails deleted, email Upton Software Ltd. Liability Company.
 
