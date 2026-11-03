@@ -169,7 +169,7 @@ Project S.O.S is a general app. It is not meant for children under 13, and it is
 
 ## Deleting your data
 
-You can delete people, groups and emergency types in the app at any time. In Settings, Alert history you can delete one alert, or all of them, with their recordings. Uninstalling the app removes everything it stored on your device. Backups you saved elsewhere are yours to delete. Messages already delivered stay on the recipient's phone, and a relay may keep its copy of an encrypted message for a while. Streams and uploads stay with the service you sent them to, under your account there.
+To delete your whole profile, go to Settings, Delete my profile. It deletes your display name, your app code and its keys, your people, groups, emergency types, history, recordings, notes and settings from your device, and the app starts again as if newly installed. The steps are also at https://elderguardadmin-byte.github.io/project_s.o.s_privacy_policy/delete-your-data. You can also delete people, groups and emergency types in the app at any time. In Settings, Alert history you can delete one alert, or all of them, with their recordings. Uninstalling the app removes everything it stored on your device. Backups you saved elsewhere are yours to delete. Messages already delivered stay on the recipient's phone, and a relay may keep its copy of an encrypted message for a while. Streams and uploads stay with the service you sent them to, under your account there.
 
 To have your support emails deleted, email Upton Software Ltd. Liability Company.
 
